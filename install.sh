@@ -25,5 +25,9 @@ done
 
 SCRIPT="https://raw.githubusercontent.com/creationix/nvm/v$VERSION/install.sh"
 
+# dependencies
+sudo yum install -y gcc-c++ openssl-devel make || exit $?
+
+# nvm
 curl -o- "$SCRIPT" | bash
 exit $?
