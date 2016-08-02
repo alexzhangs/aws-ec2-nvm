@@ -21,7 +21,7 @@ while getopts v:h opt; do
     esac
 done
 
-[[ -z $VERSION ]] && VERSIION="0.31.3"
+[[ -z $VERSION ]] && VERSION="0.31.3"
 
 SCRIPT="https://raw.githubusercontent.com/creationix/nvm/v$VERSION/install.sh"
 
