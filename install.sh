@@ -1,10 +1,12 @@
 #!/bin/bash
 
+VERSION="0.33.11"
+
 usage () {
     printf "Usage: ${0##*/} [-v VERSION | -h]\n"
     printf "OPTIONS\n"
     printf "\t[-v VERSION]\n\n"
-    printf "\tnvm version, default is 0.31.3.\n\n"
+    printf "\tnvm version will be installed, default is ${VERSION:-unset}.\n\n"
     printf "\t[-h]\n\n"
     printf "\tThis help.\n\n"
     exit 255
@@ -20,8 +22,6 @@ while getopts v:h opt; do
             ;;
     esac
 done
-
-[[ -z $VERSION ]] && VERSION="0.31.3"
 
 SCRIPT="https://raw.githubusercontent.com/creationix/nvm/v$VERSION/install.sh"
 
